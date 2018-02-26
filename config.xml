@@ -4,5 +4,5 @@
     <name>TabSaver</name>  
     <description>Сохранение сессий</description>  
     <author>Беркович В.В.</author>  
-    <icon src="icons/Icon-64.png"/>  
+    <icon src="Icon-64.png"/>  
 </widget>
