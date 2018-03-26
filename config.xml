@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>  
- 
-<widget xmlns="http://www.w3.org/ns/widgets">  
-    <name>TabSaver</name>  
-    <description>Сохранение сессий</description>  
-    <author>Беркович В.В.</author>  
-    <icon src="Icon-64.png"/>  
-</widget>
