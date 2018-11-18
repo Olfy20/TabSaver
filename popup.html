@@ -2,11 +2,19 @@
 <html lang="ru">  
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>Тест</title>
-  <script src="code.js"></script>
+  <script src="jquery.js" type="text/javascript"></script>
+  <script src="popup.js"></script>
+  <link rel="stylesheet" href="popup.css">
  </head>
+ 
+ <header>
+  <div id="menu">
+   <input id="new_group_name" type="text" autofocus="autofocus" placeholder="Название сессии"  maxlength="37"/>
+   <a id="new_group" href="" title="Добавить сессию">+</a>
+  </div>
+ </header>
+
  <body>
-  <h1>Заголовок страницы</h1>
-  <button id="addTab">Add Tab</button>
+  <div id="data"></div>
  </body>
 </html>

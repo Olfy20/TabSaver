@@ -1,0 +1,66 @@
+body {
+    width: 300px;
+    overflow-x: hidden;
+    font-family: Tahoma, sans-serif;
+    font-size: 13px;
+    color: #4a4a4a;
+    margin-top: 50px;
+}
+
+header {
+    font-size: 15px;
+    background-color: #FF8C00;
+    color: #ffffff;
+    padding: 8px 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header input {
+    outline: none;
+    padding-left: 7px;
+    width: 220px;
+}
+
+#window_actions {
+    float: right;
+}
+
+header a {
+    margin: 0 0 0 6px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+label {
+    display: inline-block;
+    width: 120px;
+    text-align: left;
+}
+
+input[type="text"] {
+    width: 220px;
+    margin: 0;
+    padding: 2px;
+    border: 1px solid;
+    border-color: #999 #ccc #ccc;
+    border-radius: 2px;
+}
+
+input[type="button"] {
+    padding: 6px 16px;
+    border: 0;
+    border-radius: 2px;
+    cursor: pointer;
+    background: #33B5E5;
+    color: #fff;
+}
+
+input[type="button"].cancel {
+    background: #cccccc;
+}
+
+

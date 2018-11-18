@@ -1,16 +1,18 @@
 {
 	"manifest_version": 2,
 
-	"name": "Opera Extensions — Getting Started",
-	"description": "TabSaver",
+	"name": "TabSaver plugin",
+	"description": "TabSaver is a Opera extension which adds tool for save and load tabs sessions.",
 	"version": "0.0",
-	"background": {
-		"scripts": ["background.js"]
-	},
-
-	"permissions": ["tabs"],
+	
+	"permissions": [
+		"tabs",
+		"storage"
+	],
+	
 	"browser_action": {
 		"default_icon": "Icon-64.png",
-		"default_title": "TabSaver"
+		"default_title": "TabSaver",
+		"default_popup": "popup.html"
 	}
 }
