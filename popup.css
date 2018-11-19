@@ -39,26 +39,15 @@ label {
     text-align: left;
 }
 
-input[type="text"] {
-    width: 220px;
-    margin: 0;
-    padding: 2px;
-    border: 1px solid;
-    border-color: #999 #ccc #ccc;
-    border-radius: 2px;
-}
-
-input[type="button"] {
-    padding: 6px 16px;
-    border: 0;
-    border-radius: 2px;
-    cursor: pointer;
-    background: #33B5E5;
-    color: #fff;
-}
-
-input[type="button"].cancel {
-    background: #cccccc;
+header button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: black;
+    padding: 3px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
 }
 
 
