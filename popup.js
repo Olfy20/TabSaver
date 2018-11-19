@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
             for (var i = 0; i < tabs.length; i++) 
                 new_group[i] = tabs[i].url;
 
-            
+            chrome.storage.local.set({new_group_name, new_group});
         }); 
 
-        chrome.storage.local.set({new_group_name, new_group});
+        
 	},false);
 },false);
