@@ -8,24 +8,35 @@ document.addEventListener('DOMContentLoaded', function() {
 	},false);
 },false);
 
+function deleteGroup(){
+    console.log('test del'+this.id);
+}
+
+function openGroup(){
+    console.log('test open');
+}
+
+
 function reload(){   
     chrome.storage.local.get(null, function(items) {
         var data = document.getElementById('data');
         var keys = Object.keys(items);
         var html = '';
-        for (var i = 0; i < keys.length; i++){
-            html += '<div id="' + keys[i] + '" class="group">';
-            html += '<a href="javascript:openTabs('+ keys[i] + ');">' + keys[i] + '</a>';
-            html += '<button title="Удалить сессию" >X</button>';
+        for (var i = 0; i < keys.length; i++){      
+            html += '<div class="group">';
+            html += '<a id="o' + keys[i] + '">' + keys[i] + '</a>';
+            html += '<button id="d' + keys[i] + '" title="Удалить сессию" >X</button>';
             html += '</div>';
         }
         console.log('why:' + html);
         data.innerHTML = html;
+        
+        for (var i = 0; i < keys.length; i++){                            
+            document.getElementById('o'+keys[i]).addEventListener("click", openGroup);
+            document.getElementById('d'+keys[i]).addEventListener("click", deleteGroup);           
+        }
     });             
 }
 
 reload();
 
-function openTabs(key){
-    alert(key);
-}
