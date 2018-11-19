@@ -3,7 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
 	newGroupButton.addEventListener('click', function() {
 		var new_group_name = document.getElementById('new_group_name').value;
 		if(new_group_name == '')
-			new_group_name = new Date();
+			new_group_name = new Date().toLocaleString();
 		alert(new_group_name);
 	},false);
 },false);
+
+
+
