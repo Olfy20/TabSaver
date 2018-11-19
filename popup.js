@@ -11,8 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 new_group[i] = tabs[i].url;
 
             chrome.storage.local.set({new_group_name, new_group});
-        }); 
-
-        
+        });        
 	},false);
 },false);
