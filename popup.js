@@ -9,11 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
 },false);
 
 function deleteGroup(){
-    console.log('test del'+this.id);
+    console.log('test del'+this.id.slice(1));
+    chrome.storage.local.remove(this.id.slice(1));
+    reload();
 }
 
 function openGroup(){
-    console.log('test open');
+    console.log('test open'+this.id.slice(1));
 }
 
 
@@ -24,7 +26,7 @@ function reload(){
         var html = '';
         for (var i = 0; i < keys.length; i++){      
             html += '<div class="group">';
-            html += '<a id="o' + keys[i] + '">' + keys[i] + '</a>';
+            html += '<a href="" title="Открыть сессию" id="o' + keys[i] + '">' + keys[i] + '</a>';
             html += '<button id="d' + keys[i] + '" title="Удалить сессию" >X</button>';
             html += '</div>';
         }
