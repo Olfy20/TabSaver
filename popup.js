@@ -8,5 +8,24 @@ document.addEventListener('DOMContentLoaded', function() {
 	},false);
 },false);
 
+function reload(){   
+    chrome.storage.local.get(null, function(items) {
+        var data = document.getElementById('data');
+        var keys = Object.keys(items);
+        var html = '';
+        for (var i = 0; i < keys.length; i++){
+            html += '<div id="' + keys[i] + '" class="group">';
+            html += '<a href="javascript:openTabs('+ keys[i] + ');">' + keys[i] + '</a>';
+            html += '<button title="Удалить сессию" >X</button>';
+            html += '</div>';
+        }
+        console.log('why:' + html);
+        data.innerHTML = html;
+    });             
+}
 
+reload();
 
+function openTabs(key){
+    alert(key);
+}
