@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article version="5.1" xmlns="http://docbook.org/ns/docbook"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xila="http://www.w3.org/2001/XInclude/local-attributes"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:trans="http://docbook.org/ns/transclusion"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns:m="http://www.w3.org/1998/Math/MathML"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <title>Программный Продукт "TabSaver"</title>
+
+    <author>
+      <personname><firstname>Valeria</firstname>
+      <surname>Berkovych</surname></personname>
+
+      <affiliation>
+        <orgname>Berkovych Industries LLC</orgname>
+      </affiliation>
+    </author>
+
+    <pubdate>20-11-2018</pubdate>
+  </info>
+
+  <section>
+    <title>Описание продукта</title>
+
+    <para>Программный продукт <emphasis role="bold">TabSaver</emphasis> позволит
+    вам сохранять группы вкладок и быстро открывать их вновь, когда это
+    потребуется.</para>
+  </section>
+
+<section>
+    <title>Пример 1: Сохранение группы вкладок</title>
+    <para>Группы вкладок сохраняются путем использования chrome.tabs API для
+    взаимодействия с открытыми вкладками и chrome.storage API для сохранения
+    </para>
+    <programlisting>
+    chrome.tabs.getAllInWindow(null, function(tabs){
+        for (var i = 0; i &lt; tabs.length; i++)
+            value.push(tabs[i].url);
+        var new_group = {};
+        new_group[key] = value;
+        chrome.storage.local.set(new_group);
+    }); </programlisting>
+  </section>
+  <section>
+    <title>Пример 2: Удаление группы вкладок</title>
+    <para>При нажатии кнопки удаления, соответствующая сохраненная группа
+    будет удалена
+    </para>
+    <programlisting>
+    function deleteGroup(){
+        chrome.storage.local.remove(this.id.slice(1));
+        reload();
+    } </programlisting>
+  </section>
+  <section>
+    <title>Пример 3: Открытие сохраненной группы в новом окне</title>
+    <para>При нажатии кнопки удаления, соответствующая сохраненная группа
+    будет удалена
+    </para>
+    <programlisting>
+    function openGroup(){
+        console.log('test open'+this.id.slice(1));
+        var key = this.id.slice(1);
+        chrome.storage.local.get(key, function(item){
+            chrome.windows.create({url:item[key]}, function(window){});
+        });
+    }} </programlisting>
+  </section>
+</article>
