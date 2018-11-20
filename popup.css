@@ -48,11 +48,12 @@ header button {
     text-decoration: none;
     display: inline-block;
     font-size: 10px;
+    float: right;
 }
 
 .group a{
-    color: #4CAF50;
-    font-size: 11px;
+    color: #f00;
+    font-size: 17px;
 }
 
 .group button{
@@ -61,7 +62,7 @@ header button {
     border: none;
     color: black;
     padding: 3px 10px;
-    text-align: right;
+    text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 10px;
