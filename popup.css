@@ -48,6 +48,23 @@ header button {
     text-decoration: none;
     display: inline-block;
     font-size: 10px;
+    float: right;
 }
 
+.group a{
+    color: #f00;
+    font-size: 17px;
+}
+
+.group button{
+    float: right;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: black;
+    padding: 3px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+}
 
