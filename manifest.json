@@ -3,7 +3,7 @@
 
 	"name": "TabSaver plugin",
 	"description": "TabSaver is a Opera extension which adds tool for save and load tabs sessions.",
-	"version": "0.0",
+	"version": "1.0",
 	
 	"permissions": [
 		"tabs",
