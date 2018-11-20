@@ -50,4 +50,19 @@ header button {
     font-size: 10px;
 }
 
+.group a{
+    color: #4CAF50;
+    font-size: 11px;
+}
 
+.group button{
+    float: right;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: black;
+    padding: 3px 10px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+}
