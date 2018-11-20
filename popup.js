@@ -16,8 +16,13 @@ function deleteGroup(){
 
 function openGroup(){
     console.log('test open'+this.id.slice(1));
+    var profile = this.id.slice(1);
+    chrome.storage.local.get(profile, function(item){    
+    tabURLs = [];
+     chrome.windows.create({url:item[profile]}, function(window){
+    });
+   });
 }
-
 
 function reload(){   
     chrome.storage.local.get(null, function(items) {
